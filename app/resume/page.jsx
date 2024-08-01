@@ -50,37 +50,46 @@ const about = {
 const experience = {
     icon : "/assets/resume/badge.svg",
     title : "Experience",
-    description : "I have experience in building web applications using React, Node.js, and MongoDB. I have also worked with Docker and Next.js.",
+    description : "I have experience in building web applications using React, Node.js, and PostgreSQL. I have also worked with Docker and Next.js. I helped to organize many events during working for IEEE CS BUET Student Branch which helped me to improve my leadership and communication skills.",
     items : [
         {
-            company : "XYZ Company",
-            position : "Full Stack Developer",
-            duration : "2020 - Present",
-        }
+            company : "IEEE CS BUET Student Branch",
+            position : "Vice Chairperson",
+            duration : "2024 - Present",
+        }, 
+
+        {
+            company : "School of Skills",
+            position : "Technical Executive",
+            duration : "2019 - 2020",
+        },
     ]
 }
 
 const education = {
     icon : "/assets/resume/cap.svg",
     title : "Education",
-    description : "I have completed my Bachelor's degree in Computer Science from Bangladesh University of Engineering and Technology.",
+    description : "I am completing my Bachelor's degree in Computer Science from Bangladesh University of Engineering and Technology.",
     items : [
         {
-            institution : "Bangladesh University of Engineering and Technology",
+            institution : "BUET",
             degree : "Bachelor of Science in Computer Science",
-            duration : "2019 - 2024"
+            duration : "2019 - 2024",
+            result : "CGPA : 3.81/4.00"
         },
 
         {
             institution : "Notre Dame College",
             degree : "Higher Secondary Certificate",
-            duration : "2017 - 2019"
+            duration : "2017 - 2019",
+            result : "GPA : 5.00/5.00"
         },
 
         {
             institution : "Ideal School and College",
             degree : "Secondary School Certificate",
-            duration : "2010 - 2017"
+            duration : "2010 - 2017",
+            result : "GPA : 5.00/5.00"
         }
     ]
 }
@@ -199,28 +208,30 @@ const Resume = () => {
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <h3 className="text-4xl font-bold">{education.title}</h3>
                                 <p className="max-w-[600px] mx-auto xl:mx-0 text-white/60">
-                                    {education.description}
+                                {education.description}
                                 </p>
                                 
                                 <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]" >
-                                        {education.items.map((item, index) => {
-                                            return (
-                                                <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1">
-                                                    <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left"> 
-                                                        {item.degree}
-                                                    </h3>
+                                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                    {education.items.map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
+                                    >
+                                        <span className="text-accent">{item.duration}</span>
+                                        <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                        {item.degree}
+                                        </h3>
 
-                                                    <div className="flex items-center gap-3">
-                                                        <span className="w-[6px] h-[6px] bg-accent rounded-full">
-                                                        </span>
-                                                        <p className="text-white/60">{item.institution}</p>
-                                                    </div>
-                                                </li>
-                                            );
-                                        })}
-                                    </ul>
+                                        <div className="flex items-center gap-3">
+                                        <span className="w-[6px] h-[6px] bg-accent rounded-full"></span>
+                                        <p className="text-white/60">{item.institution}</p>
+                                        </div>
+                                        
+                                        <p className="text-white/60">{item.result}</p> 
+                                    </li>
+                                    ))}
+                                </ul>
                                 </ScrollArea>
                             </div>
                         </TabsContent>
