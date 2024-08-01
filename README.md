@@ -12,14 +12,14 @@ A brief introduction highlighting my experience, skills, and professional journe
 <img src="/public/project/2.png" alt="Services" width="600"/>
 This section details the services I offer, including:
 
-- **Frontend Development:** Responsive and dynamic UI design.
-- **Backend Development:** Robust server-side solutions and APIs.
-- **DevOps:** CI/CD, infrastructure as code, and cloud services.
-- **Gen AI Projects:** Innovative solutions using AI and machine learning.
+- **`Frontend Development:`** Responsive and dynamic UI design.
+- **`Backend Development:`** Robust server-side solutions and APIs.
+- **`DevOps:`** CI/CD, infrastructure as code, and cloud services.
+- **`Gen AI Projects:`** Innovative solutions using AI and machine learning.
 
 ### 3. **Highlighted Projects**
 <img src="/public/project/3.png" alt="Projects" width="600"/>
-Showcasing significant projects, such as the **VaxHub DevOps Project**, **CineConnect Project**, **C Compiler Project**, etc
+Showcasing significant projects, such as the VaxHub DevOps Project, CineConnect Project, C Compiler Project, etc 
 
 ### 4. **Resume**
 <img src="/public/project/4.png" alt="Skills" width="600"/>
