@@ -8,35 +8,31 @@ import { motion } from "framer-motion";
 
 const services = [
     {
-        num : '01',
-        title : 'Web Development',
-        description : 'We build websites that are optimized for speed, SEO, and conversion. Our websites are designed to be user-friendly and easy to navigate.',
-        href : ""
+      num: '01',
+      title: 'Frontend Development',
+      description: 'I specialize in building responsive and dynamic user interfaces using modern frontend technologies. My focus is on creating visually appealing, user-friendly, and high-performance applications.',
+      href: "",
     },
-
     {
-        num : '02',
-        title : 'Mobile App Development',
-        description : 'We develop mobile apps that are optimized for speed, SEO, and conversion. Our mobile apps are designed to be user-friendly and easy to navigate.',
-        href : ""
+      num: '02',
+      title: 'Backend Development',
+      description: 'I provide backend development services to ensure robust and scalable server-side solutions. I design and implement APIs, manage databases, and provide seamless integration with frontend systems.',
+      href: "",
     },
-
     {
-        num: '03',
-        title: 'SEO',
-        description: 'We provide SEO services that are optimized for speed, SEO, and conversion. Our SEO services are designed to be user-friendly and easy to navigate.',
-        href: ""
+      num: '03',
+      title: 'DevOps',
+      description: 'I offer comprehensive DevOps services to streamline development, deployment, and operations. My practices include CI/CD, infrastructure as code, and cloud services to enhance productivity and reliability.',
+      href: "",
     },
-
-
     {
-        num: '04',
-        title: 'E-commerce Development',
-        description: 'We provide e-commerce development services that are optimized for speed, SEO, and conversion. Our e-commerce development services are designed to be user-friendly and easy to navigate.',
-        href: ""
+      num: '04',
+      title: 'Gen AI Projects',
+      description: 'With expertise in Generative AI, I develop innovative solutions leveraging advanced machine learning and AI techniques. My projects include natural language processing, image generation, and more.',
+      href: "",
     },
-];
-    
+  ];
+  
 
 const Services = () => {
     return (

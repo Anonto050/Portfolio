@@ -21,20 +21,20 @@ const projects = [
         title: "CineConnect : A movie enthusiast's app",
         description: "A full stack web application that allows users to search for movies, view movie details, and create a watchlist.",
         stack: [{name: "Next.js"}, {name: "Tailwind CSS"}, {name: "PostgreSQL"}, {name: "Express.js"}, {name: "Node.js"}],
-        image: "/assets/work/thumb1.png",
+        image: "/assets/work/cineconnect.png",
         live: "",
-        github: ""
+        github: "https://github.com/Anonto050/CineConnect-Ultimate-Movie-Enthusiasts-Hub"
     },
 
     {
         num: "02",
         category: "DevOps",
         title: "VaxHub : A vaccination registration system",
-        description: "A full stack web application that allows users to register for a vaccination appointment.",
-        stack: [{name: "Svelte"}, {name: "PostgreSQL"}, {name: "Express.js"}, {name: "Node.js"}, {name: "Docker"}, {name: "Kubernetes"}],
-        image: "/assets/work/thumb2.png",
+        description: "A full stack web application that allows users to register for a vaccination appointment. The application uses Docker and Kubernetes for containerization and orchestration and maintains CI/CD pipelines.",
+        stack: [{name: "Svelte"}, {name: "PostgreSQL"}, {name: "Express.js"}, {name: "Node.js"}, {name: "Github Actions"} ,{name: "Docker"}, {name: "Kubernetes"}],
+        image: "/assets/work/vaxhub.png",
         live: "",
-        github: ""
+        github: "https://github.com/Anonto050/vaxhub"
     },
 
     {
@@ -43,9 +43,9 @@ const projects = [
         title: "A subset of the C compiler",
         description: "A compiler that translates a subset of the C programming language to x86 assembly language.",
         stack: [{name: "C"}, {name: "Flex"}, {name: "Bison"}],
-        image: "/assets/work/thumb3.png",
+        image: "/assets/work/compiler.png",
         live: "",
-        github: ""
+        github: "https://github.com/Anonto050/CSE-310-Compiler"
     
     }
 ];
@@ -84,17 +84,15 @@ const Work = () => {
                             </p>
 
                             {/* stack */}
-                            <ul className="flex gap-4">
-                                {project.stack.map((item, index) => {
-                                    return (
-                                        <li key={index} className="text-xl text-accent">
-                                            {item.name}
-                                            {index !== project.stack.length - 1 && ", "}
-                                        </li>
-                                    );
-                                }
-                                )}
+                            <ul className="flex flex-wrap gap-x-2 gap-y-4">
+                                {project.stack.map((item, index) => (
+                                    <li key={index} className="text-xl text-accent">
+                                    {item.name}
+                                    {index !== project.stack.length - 1 && ", "}
+                                    </li>
+                                ))}
                             </ul>
+
 
                             {/* border */}
                             <div className="border border-white/20"></div>

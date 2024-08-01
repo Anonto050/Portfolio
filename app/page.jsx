@@ -23,10 +23,12 @@ const Home = () => {
 
             {/* Button */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
-                <span> Download CV </span>
-                <FiDownload className="text-xl" />
-              </Button>
+              <a href="/Riad Ahmed Anonto.pdf" download className="inline-flex items-center gap-2">
+                <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                  <span> Download CV </span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
 
               <div className="mb-8 xl:mb-0">
                 <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-accent rounded-full flex items-center justify-center text-accent text-base hover:bg-accent hover:text-primary transition-all duration-500" />
@@ -38,11 +40,11 @@ const Home = () => {
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
           </div>
-          </div> 
-        </div>
+        </div> 
+      </div>
 
-        <States />
-      </section>
+      <States />
+    </section>
   );
 }
 

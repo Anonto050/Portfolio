@@ -1,9 +1,8 @@
 "use client";
 
 import { initScriptLoader } from "next/script";
-import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaFigma } from "react-icons/fa";
-
-import { SiTailwindcss, SiNextdotjs, SiDocker } from "react-icons/si";
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaFigma, FaJava, FaPython, FaGitAlt } from "react-icons/fa";
+import { SiTailwindcss, SiNextdotjs, SiDocker, SiKubernetes, SiOracle, SiPostgresql, SiTypescript, SiCplusplus, SiSupabase } from "react-icons/si";
 
 const about = {
     title : "About Me",
@@ -94,56 +93,104 @@ const education = {
     ]
 }
 
+
+
 const skills = {
-    title : "Skills",
-    description : "I have experience in building web applications using React, Node.js, and MongoDB. I have also worked with Docker and Next.js.",
-    skillList : [
-        {
-            name : "HTML",
-            icon : <FaHtml5 />
-        },
+  languages: {
+    title: "Languages",
+    description: "A diverse set of programming languages proficiently used to develop efficient and scalable applications.",
+    items: [
+      {
+        name: "JavaScript",
+        icon: <FaJs />,
+      },
+      {
+        name: "Python",
+        icon: <FaPython />,
+      },
+      {
+        name: "Java",
+        icon: <FaJava />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript />,
+      },
+      {
+        name: "HTML5",
+        icon: <FaHtml5 />,
+      },
+      {
+        name: "CSS3",
+        icon: <FaCss3 />,
+      },
+      {
+        name: "C++",
+        icon: <SiCplusplus />,
+      },
+      
+    ],
+  },
+  tools: {
+    title: "Tools",
+    description: "A set of powerful tools used for development, design, and deployment of projects.",
+    items: [
+      {
+        name: "Docker",
+        icon: <SiDocker />,
+      },
+      {
+        name: "Kubernetes",
+        icon: <SiKubernetes />,
+      },
+      {
+        name: "Figma",
+        icon: <FaFigma />,
+      },
+      {
+        name: "Oracle",
+        icon: <SiOracle />,
+      },
+      {
+        name: "PostgreSQL",
+        icon: <SiPostgresql />,
+      },
+      {
+        name: "Git",
+        icon: <FaGitAlt />,
+      },
+      
+    ],
+  },
+  librariesAndFrameworks: {
+    title: "Libraries & Frameworks",
+    description: "Libraries and frameworks leveraged to accelerate development and ensure robust application architecture.",
+    items: [
+      {
+        name: "React",
+        icon: <FaReact />,
+      },
+      {
+        name: "Next.js",
+        icon: <SiNextdotjs />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss />,
+      },
+      {
+        name: "Node.js",
+        icon: <FaNodeJs />,
+      },
+      {
+        name: "Supabase",
+        icon: <SiSupabase />,
+      },
+      
+    ],
+  },
+};
 
-        {
-            name : "CSS",
-            icon : <FaCss3 />
-        },
-
-        {
-            name : "JavaScript",
-            icon : <FaJs />
-        },
-
-        {
-            name : "React",
-            icon : <FaReact />
-        },
-
-        {
-            name : "Node.js",
-            icon : <FaNodeJs />
-        },
-
-        {
-            name : "Tailwind CSS",
-            icon : <SiTailwindcss />
-        },
-
-        {
-            name : "Next.js",
-            icon : <SiNextdotjs />
-        },
-
-        {
-            name : "Docker",
-            icon : <SiDocker />
-        },
-
-        {
-            name : "Figma",
-            icon : <FaFigma />
-        }
-    ]
-}
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -238,39 +285,86 @@ const Resume = () => {
 
                         <TabsContent value="Skills" className="w-full h-full">
                             <div className="flex flex-col gap-[30px]">
+                                {/* Languages Section */}
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                    <h3 className="text-4xl font-bold">{skills.title}</h3>
-                                    <p className="max-w-[600px] mx-auto xl:mx-0 text-white/60">
-                                        {skills.description}
-                                    </p>
+                                <h3 className="text-4xl font-bold">{skills.languages.title}</h3>
+                                <p className="max-w-[600px] mx-auto xl:mx-0 text-white/60">
+                                    {skills.languages.description}
+                                </p>
                                 </div>
-
                                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                                    {skills.skillList.map((skill, index) => {
-                                        return (
-                                            <li key={index}>
-                                                <TooltipProvider delayDuration={100} >
-                                                <Tooltip>
-                                                    <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
-                                                        <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                                            {skill.icon}
-                                                        </div>
-                                                    </TooltipTrigger>
-
-                                                    <TooltipContent>
-                                                        <p className="capitalize">{skill.name}</p>
-                                                    </TooltipContent>
-                                                </Tooltip>
-                                                </TooltipProvider>
-                                            </li>
-                                        );
-                                    })}
+                                {skills.languages.items.map((skill, index) => (
+                                    <li key={index}>
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
+                                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                            {skill.icon}
+                                            </div>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p className="capitalize">{skill.name}</p>
+                                        </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                    </li>
+                                ))}
                                 </ul>
 
-                                
-                            </div>
+                                {/* Tools Section */}
+                                <div className="flex flex-col gap-[30px] text-center xl:text-left mt-[40px]">
+                                <h3 className="text-4xl font-bold">{skills.tools.title}</h3>
+                                <p className="max-w-[600px] mx-auto xl:mx-0 text-white/60">
+                                    {skills.tools.description}
+                                </p>
+                                </div>
+                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                {skills.tools.items.map((skill, index) => (
+                                    <li key={index}>
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
+                                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                            {skill.icon}
+                                            </div>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p className="capitalize">{skill.name}</p>
+                                        </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                    </li>
+                                ))}
+                                </ul>
 
+                                {/* Libraries & Frameworks Section */}
+                                <div className="flex flex-col gap-[30px] text-center xl:text-left mt-[40px]">
+                                <h3 className="text-4xl font-bold">{skills.librariesAndFrameworks.title}</h3>
+                                <p className="max-w-[600px] mx-auto xl:mx-0 text-white/60">
+                                    {skills.librariesAndFrameworks.description}
+                                </p>
+                                </div>
+                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                {skills.librariesAndFrameworks.items.map((skill, index) => (
+                                    <li key={index}>
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex items-center justify-center group">
+                                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                            {skill.icon}
+                                            </div>
+                                        </TooltipTrigger>
+                                        <TooltipContent>
+                                            <p className="capitalize">{skill.name}</p>
+                                        </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                    </li>
+                                ))}
+                                </ul>
+                            </div>
                         </TabsContent>
+
 
                         <TabsContent value="About" className="w-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px]">
